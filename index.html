@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!--为了兼容ie浏览器，告诉ie浏览器使用最新版本的引擎显示当前的页面-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--为了兼容设备，是当前页面和设备保持比例-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>思诚科技</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .navbar {
+            margin-bottom: 0;
+        }
+
+        .navbar-default {
+            background-color: #fff;
+        }
+
+        .navbar-brand {
+            padding-top: 0;
+        }
+
+        #main_ad {
+            /* height: 440px;
+             background: url(img/slide.png) no-repeat;*/
+        }
+
+        #main_ad img {
+            margin: auto;
+        }
+
+        #why_chose {
+            padding: 20px 0 40px 0;
+        }
+
+        #why_chose h3 {
+            font-size: 20px;
+            color: #005ebf;
+        }
+
+        .media {
+            margin-top: 40px;
+        }
+
+        .media h4 {
+            color: #666;
+            line-height: 30px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .media p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .media .other {
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        #learn.jumbotron {
+            margin-bottom: 0;
+        }
+
+        #manager.jumbotron {
+            background-color: #fff;
+            margin-bottom: 0;
+        }
+
+        #footer {
+            background-color: #666;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+            font-size: 12px;
+        }
+
+        #footer a {
+            color: #fff;
+        }
+
+        section .fs18 {
+            font-size: 18px;
+        }
+
+        .pad {
+            padding-top: 150px;
+        }
+
+        .pad1 {
+            padding-top: 80px;
+        }
+
+        #zixun_ad, #anli_ad, #about_ad {
+            color: #ccc;
+        }
+
+        #zixun_ad p, #anli_ad p, #about_ad p {
+            font-size: 18px;
+        }
+
+        #zixun_ad.jumbotron,
+        #anli_ad.jumbotron,
+        #about_ad.jumbotron {
+            background: url(img/bg.jpg) repeat-x;
+            margin-bottom: 0;
+        }
+
+        #zixun_content .col-md-8 .media {
+            background-color: #fff;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        #zixun_content .col-md-8 .media:first-child {
+            margin-top: 0;
+        }
+
+        #zixun_content .media h4 {
+            color: #333;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        #zixun_content .media p {
+            font-size: 14px;
+            /*color:;*/
+        }
+
+        #zixun_content .col-md-4 .media {
+            padding-top: 20px;
+        }
+
+        .w45 {
+            width: 45%;
+        }
+
+        .w45 img {
+            width: 100%;
+        }
+
+        blockquote {
+            font-size: 20px;
+        }
+
+        .media-left.col-xs-12 {
+            width: auto;
+            padding-right: 30px;
+            padding-left: 0;
+        }
+
+        #zixun_content .col-md-4 {
+            background-color: #fff;
+        }
+
+        #zixun_content .col-md-4 .media {
+            padding-top: 0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .pad {
+                padding-top: 0;
+            }
+
+            .pad1 {
+                padding-top: 0;
+            }
+
+            #zixun_content .media-left {
+                vertical-align: middle;
+            }
+
+            #zixun_content .col-md-8 {
+                /*padding-left: 0;*/
+                padding: 0;
+            }
+
+           .media-left.col-xs-12 {
+                padding: 0 !important;
+            }
+
+            #zixun_content .col-md-4 .media, #zixun_content .col-md-8 .media {
+                margin-top: 0;
+                padding-top: 0;
+            }
+
+            #zixun_content .col-md-4 .media{
+                margin-top: 10px;
+            }
+            #zixun_content .col-md-4 h4 {
+                font-size: 14px;
+            }
+
+            #zixun_content.jumbotron {
+                background-color: #fff;
+            }
+
+            .list-group-item{
+                background-color: #eee;
+            }
+            #about_content .list-group-item{
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+
+        #anli_content.jumbotron {
+            margin-bottom: 0;
+        }
+
+        #anli_content p {
+            color: #8c8c8c;
+            font-size: 14px;
+            padding: 0 15px;
+        }
+
+        #about .jumbotron {
+            margin-bottom: 0;
+        }
+
+        #about_content p{
+            font-size: 14px;
+        }
+        @media (min-width: 768px){
+            .media-left.col-xs-12{
+                padding-right: 30px !important;
+            }
+        }
+        .affix {
+            position: fixed;
+            top: 220px;
+            z-index: 10000;
+            left: 25px;
+        }
+
+    </style>
+
+</head>
+<body>
+<!-- 头部导航区域-->
+<header id="header">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav">
+                    <span class="sr-only">菜单切换</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="nav">
+                <ul class="nav navbar-nav ">
+                    <li class="active"><a href="#home" data-toggle="tab"><span class="glyphicon glyphicon-home"></span>
+                        首页</a></li>
+                    <li><a href="#zixun" data-toggle="tab"><span class="glyphicon glyphicon-list"></span> 资讯</a></li>
+                    <li><a href="#anli" data-toggle="tab"><span class="glyphicon glyphicon-fire"></span> 案例</a></li>
+                    <li><a href="#about" data-toggle="tab"><span class="glyphicon glyphicon-question-sign"></span>
+                        关于</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<!-- /头部导航区域-->
+<div class="tab-content">
+    <!-- 首页内容-->
+    <div class="tab-pane active" id="home">
+        <!-- 轮播区域-->
+        <section id="main_ad" class="carousel slide" data-ride="carousel">
+
+            <!--小圆点-->
+            <ol class="carousel-indicators">
+                <li class="active" data-slide-to="0" data-target="#main_ad"></li>
+                <li data-slide-to="1" data-target="#main_ad"></li>
+                <li data-slide-to="2" data-target="#main_ad"></li>
+            </ol>
+
+            <!--图片-->
+            <div class="carousel-inner" style=" background: url(img/slide.png);">
+                <div class="item active">
+                    <img src="img/slide1.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/slide2.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/slide3.png" alt="">
+                </div>
+            </div>
+
+            <!--左右焦点-->
+            <a class="carousel-control left" data-slide="prev" href="#main_ad">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="carousel-control right" data-slide="next" href="#main_ad">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </section>
+        <!-- /轮播区域-->
+
+        <!-- 内容区域-->
+        <div class="content">
+            <section id="why_chose">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12  col-xs-12 text-center">
+                            <h3>「为什么选择思诚科技培训」</h3>
+                            <p style="color: #999; font-size: 16px;">强大的师资力量，完美的实战型管理课程，让您的企业实现质的腾飞</p>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 media">
+                            <div class="media-left media-middle">
+                                <img class="media-object" src="img/tab1-1.png" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">课程内容</h4>
+                                <p class="other">其它：高校不知名的讲师编写，没有任何的实战价值的教材！</p>
+                                <p>我们：知名企业家、管理学大师联合编写的具有实现性教材！</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 media">
+                            <div class="media-left media-middle">
+                                <img class="media-object" src="img/tab1-2.png" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">师资力量</h4>
+                                <p class="other">其它：北欧美正牌大学毕业的、业界没有知名度的讲师！</p>
+                                <p>我们：美国哈弗、耶鲁等世界一流高校、享有声誉的名牌专家！</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 media">
+                            <div class="media-left media-middle">
+                                <img class="media-object" src="img/tab1-3.png" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">课时安排</h4>
+                                <p class="other">其它：无法保证上课效率、没有时间表、任务无法完成！</p>
+                                <p>我们：保证按时间表的上课、效率高、当天的任务当天完成！</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 media">
+                            <div class="media-left media-middle">
+                                <img class="media-object" src="img/tab1-4.png" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">服务团队</h4>
+                                <p class="other">其它：社会招聘的、服务水平参差不齐的普通员工！</p>
+                                <p>我们：内部培养、经过良好高端服务培训的高标准员工！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="learn" class="jumbotron">
+                <div class="container">
+                    <div class="col-md-6 text-center pad">
+                        <h3 class="text-muted">强大的学习体系</h3>
+                        <p class="fs18 text-muted">经过管理学大师层层把关、让您的企业突飞猛进。</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="img/tab2.png" alt="" class="img-responsive" style="display: inline-block">
+                    </div>
+                </div>
+            </section>
+            <section id="manager" class="jumbotron">
+                <div class="container">
+                    <div class="col-md-6 text-center">
+                        <img src="img/tab3.png" alt="" class="img-responsive" style="display: inline-block">
+                    </div>
+                    <div class="col-md-6 text-center  pad1">
+                        <h3 class="text-muted">完美的管理方式</h3>
+                        <p class="fs18 text-muted">最新的管理培训方案，让您的企业赶超同行。</p>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- /内容区域-->
+
+
+    </div>
+    <!-- /首页内容-->
+
+    <!-- 资讯内容-->
+    <div class="tab-pane" id="zixun">
+        <!-- /资讯内容-->
+        <section id="zixun_ad" class="jumbotron">
+            <div class="container">
+                <h2>资讯</h2>
+                <p>企业内训的最新动态、资源等...</p>
+            </div>
+        </section>
+        <section id="zixun_content" class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="media">
+                            <div class="media-left w45 col-xs-12">
+                                <img src="img/info1.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
+                                <p>
+                                    TVOS2.0是在TVOS1.0与华为MediaOS及阿里巴巴YunOS融合的基础上，打造的新一代智能电视操作系统。根据此前的媒体报道，华为主要承担TVOS2.0的开发工作，TVOS2.0内置的电视购物商城由阿里方面负责。
+                                </p>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                        <div class="media">
+
+                            <div class="media-left w45 col-xs-12">
+                                <img src="img/info2.jpg" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4>苹果4寸手机为何要配置强大的A9处理器？</h4>
+                                <p>
+                                    苹果明年初有可能对外发布一款硬件经过升级的四英寸手机，相当于当年iPhone
+                                    5s。该手机将会配置苹果在2015年旗舰手机中采用的A9处理器。配置性能如此强大的应用处理器？
+                                </p>
+                                <p>admin 15/10/11</p>
+                            </div>
+
+                        </div>
+                        <div class="media">
+
+                            <div class="media-left w45 col-xs-12">
+                                <img src="img/info3.jpg" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4>六家互联网公司发声明 抵制流量劫持...</h4>
+                                <p>
+                                    六家互联网公司（今日头条、美团大众点评网、360、腾讯、微博、小米科技）今日发布联合声明，呼吁有关运营商严格打击流量劫持问题，重视互联网公司被流量劫持，可能导致的严重后果。
+                                </p>
+                                <p>admin 15/10/11</p>
+                            </div>
+
+                        </div>
+                        <div class="media">
+                            <div class="media-left w45 col-xs-12">
+                                <img src="img/info1.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
+                                <p>
+                                    TVOS2.0是在TVOS1.0与华为MediaOS及阿里巴巴YunOS融合的基础上，打造的新一代智能电视操作系统。根据此前的媒体报道，华为主要承担TVOS2.0的开发工作，TVOS2.0内置的电视购物商城由阿里方面负责。
+                                </p>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                        <div class="media">
+
+                            <div class="media-left w45 col-xs-12">
+                                <img src="img/info2.jpg" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4>苹果4寸手机为何要配置强大的A9处理器？</h4>
+                                <p>
+                                    苹果明年初有可能对外发布一款硬件经过升级的四英寸手机，相当于当年iPhone
+                                    5s。该手机将会配置苹果在2015年旗舰手机中采用的A9处理器。配置性能如此强大的应用处理器？
+                                </p>
+                                <p>admin 15/10/11</p>
+                            </div>
+
+                        </div>
+                        <div class="media hidden-xs">
+
+                            <div class="media-left w45 col-xs-12">
+                                <img src="img/info3.jpg" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4>六家互联网公司发声明 抵制流量劫持...</h4>
+                                <p>
+                                    六家互联网公司（今日头条、美团大众点评网、360、腾讯、微博、小米科技）今日发布联合声明，呼吁有关运营商严格打击流量劫持问题，重视互联网公司被流量劫持，可能导致的严重后果。
+                                </p>
+                                <p>admin 15/10/11</p>
+                            </div>
+
+                        </div>
+                        <div class="media hidden-xs">
+                            <div class="media-left w45 col-xs-12">
+                                <img src="img/info1.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
+                                <p>
+                                    TVOS2.0是在TVOS1.0与华为MediaOS及阿里巴巴YunOS融合的基础上，打造的新一代智能电视操作系统。根据此前的媒体报道，华为主要承担TVOS2.0的开发工作，TVOS2.0内置的电视购物商城由阿里方面负责。
+                                </p>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                        <div class="media hidden-xs">
+
+                            <div class="media-left w45 col-xs-12">
+                                <img src="img/info2.jpg" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4>苹果4寸手机为何要配置强大的A9处理器？</h4>
+                                <p>
+                                    苹果明年初有可能对外发布一款硬件经过升级的四英寸手机，相当于当年iPhone
+                                    5s。该手机将会配置苹果在2015年旗舰手机中采用的A9处理器。配置性能如此强大的应用处理器？
+                                </p>
+                                <p>admin 15/10/11</p>
+                            </div>
+
+                        </div>
+                        <div class="media hidden-xs">
+
+                            <div class="media-left w45 col-xs-12">
+                                <img src="img/info3.jpg" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4>六家互联网公司发声明 抵制流量劫持...</h4>
+                                <p>
+                                    六家互联网公司（今日头条、美团大众点评网、360、腾讯、微博、小米科技）今日发布联合声明，呼吁有关运营商严格打击流量劫持问题，重视互联网公司被流量劫持，可能导致的严重后果。
+                                </p>
+                                <p>admin 15/10/11</p>
+                            </div>
+
+                        </div>
+                        <div class="media hidden-xs">
+                            <div class="media-left w45 col-xs-12">
+                                <img src="img/info1.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
+                                <p>
+                                    TVOS2.0是在TVOS1.0与华为MediaOS及阿里巴巴YunOS融合的基础上，打造的新一代智能电视操作系统。根据此前的媒体报道，华为主要承担TVOS2.0的开发工作，TVOS2.0内置的电视购物商城由阿里方面负责。
+                                </p>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                        <div class="media hidden-xs">
+
+                            <div class="media-left w45 col-xs-12">
+                                <img src="img/info2.jpg" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4>苹果4寸手机为何要配置强大的A9处理器？</h4>
+                                <p>
+                                    苹果明年初有可能对外发布一款硬件经过升级的四英寸手机，相当于当年iPhone
+                                    5s。该手机将会配置苹果在2015年旗舰手机中采用的A9处理器。配置性能如此强大的应用处理器？
+                                </p>
+                                <p>admin 15/10/11</p>
+                            </div>
+
+                        </div>
+                        <div class="media hidden-xs">
+
+                            <div class="media-left w45 col-xs-12">
+                                <img src="img/info3.jpg" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h4>六家互联网公司发声明 抵制流量劫持...</h4>
+                                <p>
+                                    六家互联网公司（今日头条、美团大众点评网、360、腾讯、微博、小米科技）今日发布联合声明，呼吁有关运营商严格打击流量劫持问题，重视互联网公司被流量劫持，可能导致的严重后果。
+                                </p>
+                                <p>admin 15/10/11</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12" style="padding-top: 20px;">
+                        <blockquote>热门资讯</blockquote>
+                        <div class="media">
+                            <div class="media-left media-middle w45">
+                                <img src="img/info3.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>六家互联网公司发声明 抵制流量劫持等违法行为</h4>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left  media-middle w45 ">
+                                <img src="img/info1.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left  media-middle w45 ">
+                                <img src="img/info1.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                        <div class="media hidden-xs">
+                            <div class="media-left media-middle w45">
+                                <img src="img/info3.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>六家互联网公司发声明 抵制流量劫持等违法行为</h4>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                        <div class="media hidden-xs">
+                            <div class="media-left  media-middle w45 ">
+                                <img src="img/info1.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                        <div class="media hidden-xs">
+                            <div class="media-left  media-middle w45 ">
+                                <img src="img/info1.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                        <div class="media hidden-xs">
+                            <div class="media-left media-middle w45">
+                                <img src="img/info3.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>六家互联网公司发声明 抵制流量劫持等违法行为</h4>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                        <div class="media hidden-xs">
+                            <div class="media-left  media-middle w45 ">
+                                <img src="img/info1.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                        <div class="media hidden-xs">
+                            <div class="media-left  media-middle w45 ">
+                                <img src="img/info1.jpg" alt="" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
+                                <p>admin 15/10/11</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 案例内容-->
+    </div>
+
+    <!-- 案例内容-->
+    <div class="tab-pane" id="anli">
+
+        <section id="anli_ad" class="jumbotron">
+            <div class="container">
+                <h2>案例</h2>
+                <p>和各大明星企业有着紧密联系...</p>
+            </div>
+        </section>
+        <section id="anli_content" class="jumbotron">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="panel panel-default">
+                            <img src="img/case1.jpg" alt="" class="img-responsive">
+                            <h4>中国移动通信</h4>
+                            <p>参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="panel panel-default">
+                            <img src="img/case2.jpg" alt="" class="img-responsive">
+                            <h4>中国石化</h4>
+                            <p>参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="panel panel-default">
+                            <img src="img/case3.jpg" alt="" class="img-responsive">
+                            <h4>中国联通</h4>
+                            <p>参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="panel panel-default">
+                            <img src="img/case4.jpg" alt="" class="img-responsive">
+                            <h4>中国电信</h4>
+                            <p>参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="panel panel-default">
+                            <img src="img/case3.jpg" alt="" class="img-responsive">
+                            <h4>中国联通</h4>
+                            <p>参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="panel panel-default">
+                            <img src="img/case4.jpg" alt="" class="img-responsive">
+                            <h4>中国电信</h4>
+                            <p>参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="panel panel-default">
+                            <img src="img/case2.jpg" alt="" class="img-responsive">
+                            <h4>中国石化</h4>
+                            <p>参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="panel panel-default">
+                            <img src="img/case1.jpg" alt="" class="img-responsive">
+                            <h4>中国移动通信</h4>
+                            <p>参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="panel panel-default">
+                            <img src="img/case1.jpg" alt="" class="img-responsive">
+                            <h4>中国移动通信</h4>
+                            <p>参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="panel panel-default">
+                            <img src="img/case2.jpg" alt="" class="img-responsive">
+                            <h4>中国石化</h4>
+                            <p>参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="panel panel-default">
+                            <img src="img/case3.jpg" alt="" class="img-responsive">
+                            <h4>中国联通</h4>
+                            <p>参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="panel panel-default">
+                            <img src="img/case4.jpg" alt="" class="img-responsive">
+                            <h4>中国电信</h4>
+                            <p>参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /案例内容-->
+    <!-- 关于内容-->
+    <div class="tab-pane" id="about">
+        <section id="about_ad" class="jumbotron">
+            <div class="container">
+                <h2>关于</h2>
+                <p>本机构的成长介绍...</p>
+            </div>
+        </section>
+        <section id="about_content" class="jumbotron">
+            <div class="container">
+                <div class="col-sm-3">
+                    <ul class="list-group row">
+                        <li class="list-group-item col-sm-12 col-xs-4"><a href="#jiejian">1.机构介绍</a></li>
+                        <li class="list-group-item col-sm-12 col-xs-4"><a href="#add">2.加入我们</a></li>
+                        <li class="list-group-item col-sm-12 col-xs-4"><a href="#inform">3.联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-9 col-xs-12" style="background-color: #fff;">
+                    <div id="jiejian">
+                        <div class="page-header">
+                            <h3>机构介绍</h3>
+                        </div>
+                        <p>
+                            思诚科技有限公司（SEECEN TECHNOLOGY CO,LTD,以下简称“思诚科技”）是一家为企业提供信息咨询、技术支持、产品研发、技术培训、人才服务等信息化行业整体解决方案的信息服务企业。公司总部坐落于国家首批软件开发服务外包示范城市、中部地区软件产业基地和软件人才培养基地——南昌，同时在深圳设立了办事处。
+                            思诚科技(seecen)是一家面向企业、高等院校、大学生，提供信息技术咨询与软件人才服务的专业机构。思诚科技同时是Oracle（甲骨文）公司江西地区唯一授权WDP合作伙伴，为客户提供Oracle原厂商认证的技术咨询与认证考试培训服务。
+                            企业信息咨询中心——技术支持中心
+                            思诚科技致力于引进甲骨文最新、最核心技术，为企业客户提供：
+                            >>信息系统项目咨询——为企业策划涵盖软件研发全流程的专业解决方案；
+                            >>产品售后支持服务——对于选用思诚科技软件产品的客户，提供无忧售后服务；
+                            >>信息系统外包项目——提供软件项目外包独立开发、以及双方共同开发等多种合作模式
+                        </p>
+                    </div>
+                    <div id="add">
+                        <div class="page-header">
+                            <h3>加入我们</h3>
+                        </div>
+                            <p>
+                                为何选择思诚（seecen）<br>
+                                您是否曾经在一路绿灯的道路上畅通无阻地行驶过？我们正处于高速扩张期，思诚（seecen）公司的快速成长将为您开辟“成功快车道”：更广泛的选择余地、更快的学习速度以及更迅速的晋升通道。
+                                思诚（seecen）秉承“诚信、创新、分享、担当”的企业文化，我们要求自己敬业、同时专业。我们支持员工成为全面发展的通才，也鼓励我们的人员按照自己的兴趣和热情发展成为在特定领域具有一定影响力的专才。无论如何，您都要接受导师的挑战、都会获得队友的分享和支持、都能从切实有形的项目成果中汲取勇气和动能。
+                                思诚（seecen）公司是一个可以让您充满激情，在成就客户、企业的同时，不断成就自我的地方。请踏上思诚（seecen）为您铺设的“成功快车道”，您准备好了吗？
+                            </p>
+                    </div>
+                    <div id="inform">
+                        <div class="page-header">
+                            <h3>联系方式</h3>
+                        </div>
+                            <p>地址：江西省南昌市高新区紫阳大道98号</p>
+                            <p>邮编：1234567</p>
+                            <p>电话：0791-88888888</p>
+                            <p>传真：0791-8666666</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /关于内容-->
+</div>
+
+<!-- 底部区域-->
+<footer id="footer">
+    <div class="container text-center">
+        <p>
+            <a href="#">企业培训</a> | <a href="#">合作事宜</a> | <a href="#">版权投诉</a>
+        </p>
+        <p>赣ICP 备12345678.&copy;2009-2016 思诚科技.Powered by Bootstrap.</p>
+    </div>
+</footer>
+<!-- /底部区域-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
